@@ -1,0 +1,1159 @@
+::-webkit-scrollbar {
+  display: none;
+}
+::placeholder {
+  color: #CCCCCC;
+  opacity: 1; /* Firefox */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-user-select: none; /* Safari/Chrome */
+     /* Disable pointer events to prevent right-click copy */
+  } 
+  
+  
+  a,Link,button,input{
+    background: transparent;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+  }
+
+ .top-nav{
+    position: fixed;
+    background: #0093FF;
+    color: #fff;
+    font-family: sans-serif;
+    z-index: 999;
+    width: 480px;
+    height: 44px;
+    line-height: 44px;
+    display: flex;
+    font-size: 16px;
+    white-space: nowrap;
+    top: 0;
+  }
+
+  .input-box {
+    display: flex;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    height: 56px;
+    align-items: center;
+}
+
+  html{
+    scroll-behavior: smooth;
+    overflow:   scroll;
+  }
+  
+  body {
+    font-family:sans-serif;
+    width: 480px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+  }
+  
+  /* Line break */
+  .breakLine2{
+    background-color: #EDEDED;
+    width: 100%;
+    height: 1pc;
+  }
+  
+  .navbar{
+    width: 480px;
+    bottom: 0;
+    position: fixed;
+    height: 62px;
+    background: #fff;
+    color: #89cdff;
+    border-radius: 12px 12px 0 0;
+    border-top: 1px solid #f5f5f5;
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  .navbar .navItem{
+    flex: 0 0 25%;
+    max-width: 25%;   
+  }
+
+  .navbar .link{
+    height: 48px;
+    font-size: 12px;
+    font-family: serif;
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 2px;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+   
+  }
+  
+  .navbar  .link  .nav__icon{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+  }
+  .navbar .link span{
+    text-align: center;
+    font-size: 0.7rem;
+    font-size: 12px;
+    font-family: serif;
+  }
+
+
+  /* Home page */
+  #HomeTop{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+   }
+
+  #HomeTop .info{
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* margin: 30px 20px 20px 30px; */
+    padding: 15px 0 0 15px;
+   }
+   #HomeTop .info h4{
+    margin-top: 8px;
+    font-size: 16px;
+    color:  #666;
+    font-family: sans-serif;
+    font-weight: 500;
+   }
+   #HomeTop .info .amount{
+    margin-top: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #383b45;
+    white-space: nowrap;
+   }
+   #HomeTop .info .amount h2{
+    font-size: 24px;
+     color: #383B45;
+     font-family: sans-serif;
+     font-weight: 700;
+   }
+   #HomeTop .info .id{
+    display: flex;
+    font-size: 16px;
+    color: #979797;
+    margin-top: 0.25rem!important;
+   }
+   #HomeTop .info .id h5{
+    padding-top: 1px;
+    color: #959ea6;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 500;
+   }
+
+   #HomeTop #button{
+    margin-top: 10px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-end;
+   }
+
+   #HomeTop #button button{
+    border: none;
+    outline: none;
+    background: #0093FF;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    height: 40px;
+    width: -webkit-fill-available;
+    max-width: 100px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 10px;
+   }
+   #HomeTop #button :nth-child(2){
+    margin-top: 10px;
+    background: #EDEDED;
+    color: #666666;
+
+   }
+  
+   #HomeReward{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     padding-top: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+   #HomeReward div{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+    align-items: center;
+    display: flex;
+   }
+   #HomeReward div .homeIcon {
+      max-width: 50%;
+      height: 35px;
+      cursor: pointer;
+      transition: .1s;
+      /* background-size: cover; */
+   }
+   
+   #HomeReward div h4{
+    font-size: 12px;
+    font-weight: 700;
+    color:  #383b45;
+    margin-left: 10px;
+   }
+   #HomeReferBanner{
+    margin-top: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+   #HomeReferBanner img{
+      border-radius: 8px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+   }
+  
+   #HomeGame{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     padding-left: 15px;
+     padding-right: 15px;
+     margin-bottom: 100px;
+   }
+  
+   #HomeGame img{
+    border-radius: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition:.1s;
+   }
+  
+
+   /* Error page */
+
+   #errorNav {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    background: #5e48e8;
+    height: 44px;
+    line-height: 44px;
+    align-items: center;
+   }
+   #errorNav span{
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../public/back_wt.png");
+   }
+
+   #errorImg{
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+   }
+  
+   /* Invite page */
+
+   #invite{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   }
+
+   #inviteNav{
+    z-index: 99;
+    width: 100%;
+    }
+    #inviteNav #blue{
+      z-index: 99;
+      position: fixed;
+      width: 480px;
+      top: 0;
+      background: #0093FF;
+      height: 70px;
+    
+    }
+    #inviteNav #white{
+      z-index: 99;
+      position: fixed;
+      width: 480px;
+      top: 70px;
+      background: white;
+      height: 55px;
+    }
+    
+    #inviteWithdraw{
+      z-index: 99;
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      top: 8px;
+      position: fixed;
+      left: 0;
+      justify-content: center;
+    }
+    #inviteWithdraw #withdraw{
+      position: relative;
+      border-radius: 3px;
+      height: 100px;
+      width: 460px;
+      background-color: #F9FCFF;
+      border: 1px solid #D0EBFF;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+    
+    }
+    #inviteWithdraw #withdraw .container{
+      display: flex;
+      flex-direction: column;
+    }
+    #inviteWithdraw #withdraw .container span{
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #979797;
+    }
+    #inviteWithdraw #withdraw .container h2{
+      font-size: 28px;
+      font-weight: 700;
+      font-family: sans-serif;
+      color: #383b45;
+    }
+    #inviteWithdraw #withdraw .container button{
+      background: #0760A1;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #inviteContainer{
+      margin-top: 120px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      background: white;
+      height: 70px;
+    }
+    #inviteContainer span{
+      cursor: pointer;
+      color: #666;
+      letter-spacing: 0.5px;
+      font-size: 14px;
+    }
+    #inviteContainer #line{
+      background: #BABABA;
+      height: 30px;
+      width: 1px;
+    }
+    
+      #inviteDetails{
+        padding: 25px;
+        display: flex;
+        padding-right: 15px;
+        padding-left: 15px;
+        justify-content: space-between;
+      }
+      #inviteDetails .details{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #inviteDetails .details span{
+        font-size: 12px;
+        /* font-weight: 500; */
+        letter-spacing: 0.5px;
+        color: #979797;
+        padding: 5px;
+      }
+      #inviteDetails .details h1{
+        padding: 5px;
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 24px; 
+        color: #383b45;
+        text-align: center;
+        cursor: pointer;
+      }
+      #inviteDetails .details .box{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+      }
+      #inviteDetails .details .box span:nth-child(1){
+        font-size: 12px;
+      }
+      #inviteDetails .details .box span:nth-child(2){
+        font-size: 12px;
+        font-weight: 600;
+        color: #666;
+      }
+      #inviteDetails .details .box span:nth-child(3){
+        background: url('../public/goRight.png');
+        background-size: contain;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    #inviteRecord #recordTxt{
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+      }
+      #inviteRecord #recordTxt h3{
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        font-weight: 500;
+       color: #383b45;
+    }
+    #inviteRecord #recordTxt span{
+      letter-spacing: 0.5px;
+      color: #979797;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #inviteRecord #recordData{
+      display: flex;
+      /* flex-direction: column; */
+      width: 100%;
+      max-height: 100%;
+      justify-content: center;
+    }
+    #inviteRecord #recordData #data{
+      font-size: 14px;
+      color: #979797;
+    }
+  
+    
+
+    
+ /* Recharge page */
+
+ #rechargeNav{
+  position: fixed;
+  width: 480px;
+  top: 0;
+  display: flex;
+  height: 45px;
+  z-index: 999;
+  align-items: center;
+  color: white;
+  background-color: #0093FF;
+  justify-content: center;
+ }
+ #rechargeNav h4{
+  position: absolute;
+  left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+ }
+ #rechargeNav h5{
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+ }
+ #rechargeNav h3{
+    font-size: 18px;
+    font-weight: 600;
+ }
+
+#rechargeBal{
+  margin-top: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+#rechargeBal span{
+  font-size: 16px;
+  color: #959EA6;
+}
+#rechargeBal h2{
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #383b45;
+  margin-bottom: 10px;
+}
+
+#rechargeInput {
+  margin: auto;
+  justify-content: center;
+  width: 90%;
+  padding: 15px;
+}
+#rechargeInput h4{
+  font-size: 18px;
+  font-weight: 600;
+  color: #383b45;
+  margin-bottom: 15px;
+}
+#rechargeInput span{
+  font-size: 30px;
+}
+#rechargeInput input{
+  margin-left: 10px;
+  font-size: 40px;
+   border: 0;
+   height: 40px;
+   width: 70%;
+   outline: none;
+   padding: 10px;
+   transition: .1s;
+}
+
+#rechargeInput hr{
+  margin-top: 10px;
+  border: none;
+  height: 2px;
+  border-radius: 8px;
+  background: #CCCCCC;
+}
+
+
+#rechargeAmount{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#rechargeAmount .value{
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 15px;
+  background: #ebf7ff;
+  line-height: 40px;
+  height: 40px;
+  width: 29%;
+  font-size: 16px;
+  color: rgb(56, 59, 69);
+  font-weight: 400;
+  transition: 0.2s;
+  font-family: Rubik;
+  cursor:  pointer;
+}
+/* #rechargeAmount .value:hover{
+  width: 34%;
+} */
+#rechargeAmount #rechargeBtn{
+  width: 100%;
+  padding: 10px;
+}
+
+#rechargeAmount #rechargeBtn .btn{
+  outline: none;
+  border: none;
+  width: 100%;
+  transition-duration: 0s;
+  box-shadow: #0000004d 0px 0px 10px;
+  line-height: 48px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: #0093ff;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+
+/* My page */
+#myNav{
+z-index: 99;
+height: 150px;
+width: 100%;
+/* position: fixed;
+top: 0; */
+}
+#myNav #blue{
+  z-index: 99;
+  position: fixed;
+  width: 480px;
+  top: 0;
+  background: #0093FF;
+  height: 70px;
+
+}
+#myNav #white{
+  z-index: 99;
+  position: fixed;
+  width: 480px;
+  top: 70px;
+  background: white;
+  height: 65px;
+}
+#profile{
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  top: 8px;
+  position: fixed;
+  left: 0;
+}
+#profile #myProfile{
+  position: relative;
+  border-radius: 3px;
+  height: 120px;
+  width: 460px;
+  background-color: #F9FCFF;
+  border: 1px solid #D0EBFF;
+  display: flex;
+}
+
+#profile #myProfile .avatar{
+  margin: 10px 20px 10px 20px; 
+  border-radius: 50%;
+  background: url('../public/avatar.png') no-repeat center;
+  height: 42px;
+  min-width: 42px;
+  display: inline-flex;
+  background-size: contain;
+  background-color: #fff;
+}
+
+
+#profile #myProfile .info{
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: url('../public/info.svg') center/contain no-repeat;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#profile #myProfile #data{
+  display: flex;
+  flex-direction: column;
+}
+#profile #myProfile h2{
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: monospace;
+  color: #000;
+}
+#profile #myProfile #data #id{
+  text-align: center;
+  display: flex;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 500;
+  justify-content: center;
+}
+
+#profile #myProfile #data #id span{
+  color: #959ea6;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+#profile #myProfileButton{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+#profile #myProfileButton button{
+  margin-left: 5px;
+  background: white;
+  outline: none;
+  padding: 10px 5px;
+  border-radius: 5px;
+  color: #0093FF;
+  transition: 0.3s;
+  font-size: 14px;
+  border: 1px solid #0093FF;
+  cursor: pointer;
+}
+
+.myList{
+  position: relative;
+  padding-left: 1rem!important;
+  padding-right: 1rem!important;
+ 
+}
+.myList .list{
+  display: block;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 0!important;
+  padding-right: 0.5rem!important;
+  padding-top: 1rem!important;
+  padding-bottom: 1rem!important;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+
+.myList .list .icon{
+    height: 28px;
+    min-width: 28px;
+    margin-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.myList .list .orderIcon{
+  background: url(../public/orderIcon.png) no-repeat center/contain;
+}
+.myList .list .financialDetails{
+  background: url(../public/fdetail.png) no-repeat center/contain;
+}
+.myList .list .download{
+  background: url(../public/down.png) no-repeat center/contain;
+}
+.myList .list .followUs{
+  background: url(../public/telegram.png) no-repeat center/contain;
+}
+.myList .list .support{
+  background: url(../public/support.png) no-repeat center/contain;
+}
+.myList .list .complaint{
+  background: url(../public/telegram.png) no-repeat center/contain;
+}
+
+.myList .list .txt{
+  text-align: left;
+  font-size: 16px;
+  color: #666;
+  line-height: 28px;
+}
+.myList .list .arrow{
+  background: url(../public/arrowRight.png) no-repeat center;
+    background-size: contain;
+    height: 14px;
+    min-width: 20px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-top: 8px;
+}
+
+#signOut{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-bottom: 1rem!important;
+  padding-top: 1rem!important;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 16px;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Login page */
+
+#logNav .logback{
+  display: flex;
+  align-items: center;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#logNav .logback h3{
+  font-size: 18px;
+  font-weight: 400;
+}
+#logNav .logback span{
+    height: 18px;
+    min-width: 32px;
+    display: inline-flex;
+    vertical-align: text-top;
+    cursor: pointer;
+    margin-left: -10px;
+    background: url(../public/back_wt.png) no-repeat center;
+    background-size: contain;
+}
+#logHero{
+  margin-top: 45px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  justify-content: center;
+}
+#logHero img{
+  padding-top: 1.5rem !important;
+  height: 75px;
+}
+
+#logInput{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#logInput .inpLog{
+   display: flex;
+}
+#logInput .inpLog .cell{
+  background: url('../public/cell.png') no-repeat center;
+    padding: 10px;
+    color: #000;
+    min-width: 50px;
+    text-align: center;
+    text-align: center;
+    display: inline-block;
+    background-size: contain;
+    height: 20px;
+}
+#logInput .inpLog .lock{
+  background: url('../public/lock.png') no-repeat center;
+  padding: 10px;
+  color: #000;
+  min-width: 50px;
+  text-align: center;
+  text-align: center;
+  display: inline-block;
+  background-size: contain;
+  height: 20px;
+ 
+}
+#logInput .inpLog input{
+  outline: none;
+  border: none;
+  width: 100%;
+  background: none;
+  font-size: 18px;
+  transition: .1s;
+  height: fit-content;
+  padding: 10px;
+}
+#logInput .inpLog input::placeholder{
+  color: #666;
+}
+#logButton{
+    padding-top: 0.5rem!important;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 1rem!important;
+}
+#logButton button{
+    background-color: #a5a5a5;
+    transition-duration: 0s;
+    box-shadow: #0000004d 0px 0px 10px;
+    line-height: 48px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    border: none;
+    pointer-events: none;
+}
+#logButtons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+#logButtons .logbtn{
+  font-size: 18px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+}
+#logButtons .logbtn button{
+    background-color: #fff;
+    height: 48px;
+    line-height: 48px;
+    color: #0093FF;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #0093FF;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Register */
+
+#regNav .regBack{
+  display: flex;
+  align-items: center;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#regNav .regBack  h3{
+  font-size: 18px;
+  font-weight: 400;
+}
+#regNav .regBack  span{
+    height: 18px;
+    min-width: 32px;
+    display: inline-flex;
+    vertical-align: text-top;
+    cursor: pointer; 
+    margin-left: -10px;
+    background: url(../public/back_wt.png) no-repeat center;
+    background-size: contain;
+}
+
+#regHero{
+  margin-top: 45px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  justify-content: center;
+}
+#regHero img{
+  padding-top: 1.5rem !important;
+  height: 75px;
+
+}
+
+#regInfo{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#regInfo .infoBox{
+  display: flex;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+  height: 56px;
+  align-items: center;
+  /* flex: 0 0 100%; */
+  max-width: 100%;
+}
+#regInfo .infoBox h3{
+  padding: 10px;
+  color: #000;
+  min-width: 50px;
+  text-align: center;
+  font-size: 18px;
+  display: inline-block;
+}
+#regInfo .infoBox img{
+  background: url(../public/cell.png) no-repeat center;
+  background-size: contain;
+  height: 20px;
+  padding: 10px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+
+#regInfo .infoBox .cell{
+  background: url(../public/cell.png) no-repeat center;
+  background-size: contain;
+}
+#regInfo .infoBox .lock{
+  background: url(../public/lock.png) no-repeat center;
+  background-size: contain;
+}
+#regInfo .infoBox .recommendation{
+  background: url(../public/Recommendation.png) no-repeat center;
+  background-size: contain;
+}
+#regInfo .infoBox .key{
+  background: url(../public/key.png) no-repeat center;
+  background-size: contain;
+}
+#regInfo .infoBox input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    transition: .1s;
+    height: fit-content;
+    padding: 10px;
+}
+#regInfo .infoBox input::placeholder{
+  color: #757575;
+}
+#regInfo button{
+
+  background: #00c282;
+  color: #fff;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 10px;
+  line-height: 48px;
+  min-width: 152px;
+  text-align: center;
+  padding: 0 4px;
+  margin-left: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 4px;
+  outline: none;
+  border: none;
+}
+#regButton{
+  display: flex;
+  padding-inline: 20px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-top: 0.25rem!important;
+  margin-top: 1rem!important;
+  margin-bottom: 0.5rem!important;
+  position: relative;
+  width: 100%;
+}
+#regButton button{
+    background-color: #a5a5a5;
+    transition-duration: 0s;
+    box-shadow: #0000004d 0px 0px 10px;
+    line-height: 48px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    pointer-events: none;
+    border: none;
+    outline: none;
+
+}
+#regLogin{
+  margin-top: 30px;
+  color: #383B45;
+  display: flex; 
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+#regLogin h3{
+  font-size: 16px;
+  color: #383b45;
+  font-weight: 400;
+}
+#regLogin h3 span{
+  cursor: pointer;
+  color: #0093FF;
+}
+#regPrivacy{
+  margin-top: 80px;
+  color: #383B45;
+  display: flex; 
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+#regPrivacy h3{
+  font-weight: 300;
+}
+#regPrivacy input{
+  accent-color: #0093FF;
+} 
+#regPrivacy h3 span{
+  cursor: pointer;
+  color: #0093FF;
+}
+
+
+
+@media (max-width: 767px){
+  
+  body {
+    width: 100%;
+  }
+  .navbar {
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .top-nav {
+     width: 100%;
+  }
+
+}
