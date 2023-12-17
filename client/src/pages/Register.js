@@ -1,18 +1,50 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
   const navigate= useNavigate();
   const [isChecked] = useState(true);
+  const [data, setData] = useState({mobile:"",password:"",confirmPassword:"",inviteCode:"",otp:""})
   function back(){
 
   }
-  function handleInputChange(){
-
+  function handleInputChange(event){
+      setData({...data,[event.target.name]:event.target.value});
   }
-  function handleRegister(){
+  const isInputDataValid =
+    data.mobile.trim().length === 10 &&
+    data.password.trim().length >= 6 &&
+    data.confirmPassword===data.password &&
+    data.otp.trim().length >= 6 &&
+    data.inviteCode.trim() !==''
 
+  const handleRegister =async()=>{
+      if(isInputDataValid){
+     try{
+      const allData= {mobile:data.mobile,password:data.password,inviteCode:data.inviteCode}
+       const response =await axios.post('http://localhost:3000/user',allData);
+       if(response){
+         navigate('/login')
+       }
+     }catch(err){
+      if(err.response.data.error.code===11000){
+        // user all ready exist
+        alert(" user all ready exist")
+      }
+      console.log(err)
+      
+     }
+
+      }
   }
+
+  const sendSMS = async () => {
+    const generateOTP = () => Math.floor(100000 + Math.random() * 900000);
+    const otp=generateOTP()
+    alert(otp)
+    }
+    
 
   return (
     <>
@@ -46,18 +78,18 @@ const Register = () => {
       </div>
       <div className='infoBox'>
       <img  alt='' className='recommendation'/>
-      <input type='text' id='invite' name='invite' placeholder='invite Code' maxLength={20} 
+      <input type='text' id='invite' name='inviteCode' placeholder='invite Code' maxLength={20} 
         onChange={handleInputChange}/>
       </div>
       <div className='infoBox'>
       <img  alt='' className='key'/>
       <input type='text' name='otp' placeholder='OTP' maxLength={6} 
       onChange={handleInputChange}/>
-      <button>OTP</button>
+      <button onClick={sendSMS} >OTP</button>
       </div>
     </section>
     <section id='regButton'> 
-    <button onClick={handleRegister} >Register
+    <button onClick={handleRegister} style={{backgroundColor: isInputDataValid ? '#0093FF' : '#a5a5a5'}}>Register
     {/* { loading ?  <Loader/>: 'Register'} */}
     
     </button>

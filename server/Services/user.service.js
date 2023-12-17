@@ -1,9 +1,9 @@
 
 const User = require('../Model/user.model');
 
-const createUser = async (mobile, password) => {
+const createUser = async (mobile, password, inviteCode) => {
   try {
-    const newData = new User({ mobile, password });                   
+    const newData = new User({ mobile, password ,inviteCode});                   
     await newData.save();
     console.log('Data saved successfully');
     return newData;

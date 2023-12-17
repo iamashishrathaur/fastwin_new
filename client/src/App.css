@@ -923,7 +923,7 @@ top: 0; */
     width: 100%;
     outline: none;
     border: none;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 #logButtons{
   display: flex;
@@ -1061,7 +1061,6 @@ top: 0; */
   color: #757575;
 }
 #regInfo button{
-
   background: #00c282;
   color: #fff;
   height: 48px;
@@ -1090,7 +1089,7 @@ top: 0; */
   width: 100%;
 }
 #regButton button{
-    background-color: #a5a5a5;
+    background-color: #0093FF;
     transition-duration: 0s;
     box-shadow: #0000004d 0px 0px 10px;
     line-height: 48px;
@@ -1099,7 +1098,7 @@ top: 0; */
     font-weight: 600;
     color: #fff;
     width: 100%;
-    pointer-events: none;
+    /* pointer-events: none; */
     border: none;
     outline: none;
 

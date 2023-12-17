@@ -1,18 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 const Login = () => {
-
-  function handleInput(){
-
+ const [data, setData] = useState({mobile:"",password:""})
+ const navigate= useNavigate();
+  function handleInput(event){
+    setData({ ...data, [event.target.name]: event.target.value });
   }
-function createAccount(){
+  const isInputDataValid =
+    data.mobile.trim() !== '' &&
+    data.password.trim() !== '' &&
+    data.mobile.trim().length === 10 &&
+    data.password.trim().length >= 6;
 
+
+
+const handleLogin = async () => {
+  if (isInputDataValid) {
+    setData({ mobile: data.mobile, password: data.password });
+    try {
+      const response = await axios.post("http://localhost:3000/login",data);
+      if(response){
+        navigate('/')
+        // alert("Login successful!");
+      }
+    } catch (error) {
+      if(error.response.status===500){
+        alert("user not exist");
+      }
+      if(error.response.status===501){
+        alert("wrong password");
+      }
+  }
 }
-function forgotPassword(){
+};
 
-}
-// function handleLogin(){
-
-// }
   return (
     <>
     <div>
@@ -52,13 +74,13 @@ function forgotPassword(){
         {/* <button style={buttonStyles} onClick={handleLogin}>
           {loading ?  <Loader/>: 'Login'}
         </button> */}
-        <button>
+        <button onClick={handleLogin} style={{backgroundColor: isInputDataValid ? '#0093FF' : '#a5a5a5'}}>
           Login
         </button>
       </section>
       <section id='logButtons'>
-        <div className="logbtn"><button onClick={createAccount}>Create an account</button></div>
-        <div className="logbtn"> <button onClick={forgotPassword}>Forgot Password?</button></div>
+        <div className="logbtn"><button onClick={()=>{navigate('/register')}}>Create an account</button></div>
+        <div className="logbtn"><button onClick={()=>{navigate('/forgot')}}>Forgot Password?</button></div>
       </section>
     </div>
      
