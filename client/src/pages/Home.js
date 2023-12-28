@@ -25,11 +25,11 @@ const Home = () => {
    </section>
    
    <section id='HomeReward'>
-     <div onClick={()=>{navigate('/taskreward')}}>
+     <div onClick={()=>{navigate('/task-reward')}}>
        <img src='/TaskR.png' alt='' className='homeIcon'/>
        <h4>Task reward</h4>
      </div>
-     <div onClick={()=>{navigate('/checkin')}}>
+     <div onClick={()=>{navigate('/check-in')}}>
       <img src='/CheckR.png' alt='' className='homeIcon'/>
        <h4>Check in</h4>
      </div>
@@ -39,7 +39,8 @@ const Home = () => {
    </section>
  
    <section id='HomeGame'>
-    <img src='/fast-parity.jpg' alt='fast-parity'/>
+     <img src='/fast-parity.jpg' alt='fast-parity' onClick={()=>{navigate('/fast-parity')}}/>
+   
     <img src='/parity.jpg' alt='parity'/>
     <img src='/sapre.jpg' alt='sapre'/>
     <img src='/dice.jpg' alt='dice'/>

@@ -28,7 +28,7 @@ const Invite = () => {
    <section id='inviteContainer'>
      <span onClick={()=>{navigate('/invite/privilege')}}>Privilege</span>
      <span id='line'></span>
-     <span onClick={()=>{navigate('/invite/mylink')}}>My Link</span>
+     <span onClick={()=>{navigate('/invite/my-link')}}>My Link</span>
    </section>
    <div className='breakLine2'></div>
 

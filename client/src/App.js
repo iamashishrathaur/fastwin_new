@@ -1,4 +1,5 @@
 import './App.css';
+import './Game.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -12,6 +13,7 @@ import Privilege from './pages/Privilege';
 import MyLink from './pages/MyLink';
 import TaskReward from './pages/TaskReward';
 import CheckIn from './pages/CheckIn';
+import FastParity from './games/FastParity';
 
 
 
@@ -28,9 +30,10 @@ function App() {
         <Route path="/invite" element={<Invite />} />
         <Route path='/register' element={<Register/>}/>
         <Route path='/invite/privilege' element={<Privilege/>}/>
-        <Route path='/invite/mylink' element={<MyLink/>}/>
-        <Route path='checkin' element={<CheckIn/>}/>
-        <Route path='taskreward' element={<TaskReward/>}/>
+        <Route path='/invite/my-link' element={<MyLink/>}/>
+        <Route path='check-in' element={<CheckIn/>}/>
+        <Route path='task-reward' element={<TaskReward/>}/>
+        <Route path='/fast-parity' element={<FastParity/>}></Route>
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </Router>
