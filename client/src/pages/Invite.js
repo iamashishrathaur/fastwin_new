@@ -1,7 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
+
 
 const Invite = () => {
+  const navigate=useNavigate();
   return (
     <>
      <div id='invite'>
@@ -23,9 +26,9 @@ const Invite = () => {
    </section>
 
    <section id='inviteContainer'>
-     <span>Privilege</span>
+     <span onClick={()=>{navigate('/invite/privilege')}}>Privilege</span>
      <span id='line'></span>
-     <span>My Link</span>
+     <span onClick={()=>{navigate('/invite/mylink')}}>My Link</span>
    </section>
    <div className='breakLine2'></div>
 

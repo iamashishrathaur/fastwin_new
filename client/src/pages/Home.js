@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
+
 const Home = () => {
+  const navigate = useNavigate()
   return (
     <>
     <div>
@@ -22,11 +25,11 @@ const Home = () => {
    </section>
    
    <section id='HomeReward'>
-     <div >
+     <div onClick={()=>{navigate('/taskreward')}}>
        <img src='/TaskR.png' alt='' className='homeIcon'/>
        <h4>Task reward</h4>
      </div>
-     <div >
+     <div onClick={()=>{navigate('/checkin')}}>
       <img src='/CheckR.png' alt='' className='homeIcon'/>
        <h4>Check in</h4>
      </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify'
+
 const Login = () => {
  const [data, setData] = useState({mobile:"",password:""})
  const navigate= useNavigate();
@@ -26,10 +28,18 @@ const handleLogin = async () => {
       }
     } catch (error) {
       if(error.response.status===500){
-        alert("user not exist");
+        // alert("user not exist");
+        toast.warning("user not exist",{
+          position: toast.POSITION.BOTTOM_CENTER,
+          className:"toast-message"
+          })
       }
       if(error.response.status===501){
-        alert("wrong password");
+        // alert("wrong password");
+        toast.warning("wrong password",{
+          position: toast.POSITION.BOTTOM_CENTER,
+          className:"toast-message"
+          })
       }
   }
 }

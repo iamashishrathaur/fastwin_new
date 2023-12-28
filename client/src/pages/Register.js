@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+
 
 const Register = () => {
   const navigate= useNavigate();
@@ -29,11 +31,17 @@ const Register = () => {
        }
      }catch(err){
       if(err.response.data.error.code===11000){
-        // user all ready exist
-        alert(" user all ready exist")
+        toast.warning("user already exist",{
+          position: toast.POSITION.BOTTOM_CENTER,
+          className:"toast-message"
+          })
+        // alert(" user all ready exist")
       }
-      console.log(err)
-      
+      // console.log(err)
+      toast.error(err,{
+        position: toast.POSITION.BOTTOM_CENTER,
+        className:"toast-message"
+        });
      }
 
       }
@@ -42,7 +50,11 @@ const Register = () => {
   const sendSMS = async () => {
     const generateOTP = () => Math.floor(100000 + Math.random() * 900000);
     const otp=generateOTP()
-    alert(otp)
+    toast.error(otp,{
+      position: toast.POSITION.BOTTOM_CENTER,
+      className:"toast-message"
+      })
+    // alert(otp)
     }
     
 
